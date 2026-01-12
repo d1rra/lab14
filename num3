@@ -1,0 +1,15 @@
+import random
+row = 4
+col = 6
+tlist = [[random.randint(-10, 10) for _ in range(row) for _ in range(col)]]
+print('Исходный вложенный список: ', tlist)
+
+sorted_tlist = []
+for  row in tlist:
+    new_list = []
+    for element in row:
+        if element > 0:
+            new_list.append(element)
+    sorted_tlist.append(new_list)
+
+print('Отфильтрованный список(x > 0):', sorted_tlist)
