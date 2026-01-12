@@ -1,0 +1,20 @@
+import random
+row = 3
+col = 3
+tlist = [[random.randint(1, 100) for _ in range(col)] for _ in range(row)]
+print(tlist)
+print(row)
+
+row_sum = []
+for rowee in tlist:
+    row_sum.append(sum(rowee))
+
+total = sum(row_sum)
+max_rsum = max(row_sum)
+max_rindex = row_sum.index(max_rsum)
+print('Суммы элементов по строкам: ')
+for i in range(len(row_sum)):
+    print('Строка: ', i , 'Сумма = ', row_sum[i])
+print('Общая сумма всех элементов: ', total)
+print('Строка с макс суммой: ', max_rindex)
+print('Максимальная сумма в одной строке: ', max_rsum)
