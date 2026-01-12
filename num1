@@ -1,0 +1,18 @@
+import random
+row = 4
+col = 4
+tlist = [[random.randint(1, 100) for _ in range(col)] for _ in range(row)]
+print('Вложенный список ', tlist)
+max_zn = tlist[0][0]
+row_index = 0
+col_index = 0
+for i in range(len(tlist)):
+    for j in range(len(tlist[i])):
+        if tlist[i][j] > max_zn:
+            max_zn = tlist[i][j]
+            row_index = i
+            col_index = j
+
+print('Максимальное значение списка:', max_zn)
+print('Индекс строки:', row_index)
+print('Индекс позиции в этой строке:', col_index)
