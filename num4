@@ -1,0 +1,18 @@
+import random
+row = 5
+col = 5
+tlist = [[random.randint(1, 100) for _ in range(col)] for _ in range(row)]
+print('Вложенный список ', tlist)
+position = int(input('Введите число для поиска: '))
+positions = []
+
+for i in range(len(tlist)):
+    for j in range(len(tlist[i])):
+        if tlist[i][j] == position:
+            positions.append([i, j])
+if positions:
+    print('Элемент найденг в позициях:')
+    for pos in positions:
+        print('Строка', pos[0], 'Позиция', pos[1] )
+else:
+    print('Элемент отсутсвует или не найден')
